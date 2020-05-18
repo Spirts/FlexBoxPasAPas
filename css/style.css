@@ -1,0 +1,124 @@
+body{
+    background-color: white;
+}
+
+.padding {
+    padding: 5px;
+}
+
+.container {
+    max-width: 980px;
+    margin:auto;
+    background-color: grey;
+}
+
+footer, header {
+    background-color: #666;
+    color:#fff;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content:center;
+    background-color: #aaa;
+
+}
+
+nav p {
+    align-items:center;
+}
+
+nav p a{
+    text-decoration: none;
+    color:#000;
+}
+
+nav p a:hover{
+    color:#fff;
+}
+
+main{
+    display:flex;
+    flex-direction: row;
+}
+
+sidebar {
+    min-width:20%;
+    background-color: #eee;
+}
+
+sidebar p a{
+    text-decoration: none;
+    color:#000;
+}
+
+sidebar p a:hover{
+    color:#fff;
+}
+
+sidebar.right {
+    order:5;
+}
+
+section h2{
+    margin:0;
+}
+
+section{
+display:flex;
+flex-flow:column;
+background-color: #fff;
+}
+
+main {
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #666;
+    color:#fff;
+}
+
+@media (max-width:640px){
+    nav p {
+        min-width:25%;
+        text-align: center;
+    }
+    
+    section{
+        flex-flow: column;
+    }
+
+    main {
+        flex-flow:column;
+    }
+    
+    div.sidecontenu{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .sidecontenu p, .sidecontenu h3{
+        align-self:center;
+    }
+
+    .sidecontenu p:not(:last-child)::after{
+        content:" - ";
+    }
+    .sidecontenu p {
+        padding:5px;
+    }
+
+    sidebar.right {
+        order:0;
+    }
+}
